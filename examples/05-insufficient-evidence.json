@@ -1,0 +1,22 @@
+{
+  "id": "insufficient-purchase-evidence",
+  "title": {
+    "en": "Limit a recommendation when purchase evidence is absent",
+    "ja": "購買根拠がない場合に推奨範囲を制限",
+    "zh": "购买证据不足时限制建议范围"
+  },
+  "request": {
+    "question": "Recommend a campaign action for this customer.",
+    "customerId": "CUST-006"
+  },
+  "expect": {
+    "intent": "campaign_recommendation",
+    "toolSequence": ["query_customer", "calculate_ltv", "find_churn_risk", "recommend_campaign"],
+    "confidence": "low",
+    "values": {
+      "actionCode": "onboarding_education",
+      "reasonCode": "no_purchase_evidence"
+    },
+    "evidenceKinds": ["limitation", "rule"]
+  }
+}

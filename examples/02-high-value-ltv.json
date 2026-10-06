@@ -1,0 +1,23 @@
+{
+  "id": "high-value-ltv",
+  "title": {
+    "en": "Calculate heuristic LTV for a repeat customer",
+    "ja": "リピート顧客のヒューリスティックLTVを算出",
+    "zh": "计算复购客户的启发式 LTV"
+  },
+  "request": {
+    "question": "Calculate LTV for this customer.",
+    "customerId": "CUST-004"
+  },
+  "expect": {
+    "intent": "ltv_analysis",
+    "toolSequence": ["query_customer", "calculate_ltv"],
+    "confidence": "high",
+    "values": {
+      "metrics.totalRevenue": 39000,
+      "metrics.estimatedLtv": 109200,
+      "multiplier": 2.8
+    },
+    "evidenceKinds": ["metric", "rule"]
+  }
+}

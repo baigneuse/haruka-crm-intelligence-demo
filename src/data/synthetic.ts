@@ -1,0 +1,51 @@
+import type { CrmDataset } from "../domain/types.js";
+
+export const syntheticDataset: CrmDataset = {
+  asOfDate: "2026-09-30",
+  customers: [
+    { id: "CUST-001", displayName: "Synthetic Customer 001", joinedAt: "2025-11-10", segment: "loyal", beautyConcern: "hydration", priceSensitivity: "low" },
+    { id: "CUST-002", displayName: "Synthetic Customer 002", joinedAt: "2025-09-15", segment: "dormant", beautyConcern: "sensitive skin", priceSensitivity: "medium" },
+    { id: "CUST-003", displayName: "Synthetic Customer 003", joinedAt: "2026-05-20", segment: "price_sensitive", beautyConcern: "makeup", priceSensitivity: "high" },
+    { id: "CUST-004", displayName: "Synthetic Customer 004", joinedAt: "2024-08-03", segment: "high_value", beautyConcern: "aging care", priceSensitivity: "low" },
+    { id: "CUST-005", displayName: "Synthetic Customer 005", joinedAt: "2026-08-21", segment: "new", beautyConcern: "hydration", priceSensitivity: "medium" },
+    { id: "CUST-006", displayName: "Synthetic Customer 006", joinedAt: "2026-09-12", segment: "new", beautyConcern: "UV care", priceSensitivity: "medium" },
+  ],
+  products: [
+    { id: "PROD-LOTION", name: "Synthetic Hydrating Lotion", category: "skincare", role: "lotion", listPrice: 4000 },
+    { id: "PROD-SERUM", name: "Synthetic Renewal Serum", category: "aging_care", role: "serum", listPrice: 6000 },
+    { id: "PROD-CREAM", name: "Synthetic Barrier Cream", category: "skincare", role: "cream", listPrice: 7000 },
+    { id: "PROD-UV", name: "Synthetic UV Protector", category: "uv_care", role: "uv", listPrice: 3500 },
+    { id: "PROD-MAKEUP", name: "Synthetic Color Base", category: "makeup", role: "makeup", listPrice: 5000 },
+  ],
+  orders: [
+    { id: "ORD-100", customerId: "CUST-001", orderedAt: "2026-06-01", channel: "owned_ec", discountRate: 0, couponUsed: false },
+    { id: "ORD-101", customerId: "CUST-001", orderedAt: "2026-07-01", channel: "store", discountRate: 0, couponUsed: false },
+    { id: "ORD-102", customerId: "CUST-001", orderedAt: "2026-08-15", channel: "owned_ec", discountRate: 10, couponUsed: true },
+    { id: "ORD-200", customerId: "CUST-002", orderedAt: "2025-12-01", channel: "marketplace", discountRate: 0, couponUsed: false },
+    { id: "ORD-300", customerId: "CUST-003", orderedAt: "2026-07-10", channel: "owned_ec", discountRate: 20, couponUsed: true },
+    { id: "ORD-301", customerId: "CUST-003", orderedAt: "2026-09-01", channel: "owned_ec", discountRate: 10, couponUsed: true },
+    { id: "ORD-400", customerId: "CUST-004", orderedAt: "2026-05-01", channel: "subscription", discountRate: 0, couponUsed: false },
+    { id: "ORD-401", customerId: "CUST-004", orderedAt: "2026-06-10", channel: "subscription", discountRate: 0, couponUsed: false },
+    { id: "ORD-402", customerId: "CUST-004", orderedAt: "2026-07-20", channel: "subscription", discountRate: 0, couponUsed: false },
+    { id: "ORD-403", customerId: "CUST-004", orderedAt: "2026-09-15", channel: "subscription", discountRate: 0, couponUsed: false },
+    { id: "ORD-500", customerId: "CUST-005", orderedAt: "2026-09-05", channel: "owned_ec", discountRate: 0, couponUsed: false },
+  ],
+  orderItems: [
+    { id: "ITEM-100", orderId: "ORD-100", productId: "PROD-LOTION", quantity: 1, unitPrice: 4000 },
+    { id: "ITEM-101", orderId: "ORD-101", productId: "PROD-SERUM", quantity: 1, unitPrice: 6000 },
+    { id: "ITEM-102", orderId: "ORD-102", productId: "PROD-CREAM", quantity: 1, unitPrice: 7000 },
+    { id: "ITEM-200", orderId: "ORD-200", productId: "PROD-LOTION", quantity: 1, unitPrice: 4000 },
+    { id: "ITEM-300", orderId: "ORD-300", productId: "PROD-MAKEUP", quantity: 1, unitPrice: 5000 },
+    { id: "ITEM-301", orderId: "ORD-301", productId: "PROD-UV", quantity: 1, unitPrice: 3500 },
+    { id: "ITEM-400", orderId: "ORD-400", productId: "PROD-SERUM", quantity: 2, unitPrice: 6000 },
+    { id: "ITEM-401", orderId: "ORD-401", productId: "PROD-CREAM", quantity: 1, unitPrice: 7000 },
+    { id: "ITEM-402", orderId: "ORD-402", productId: "PROD-SERUM", quantity: 1, unitPrice: 6000 },
+    { id: "ITEM-403", orderId: "ORD-403", productId: "PROD-CREAM", quantity: 2, unitPrice: 7000 },
+    { id: "ITEM-500", orderId: "ORD-500", productId: "PROD-LOTION", quantity: 1, unitPrice: 4000 },
+  ],
+  campaigns: [
+    { id: "CAMP-001", name: "Synthetic Second Purchase Nurture", targetSegment: "new", action: "education", status: "active", startDate: "2026-09-01", endDate: "2026-09-30", budget: 50000 },
+    { id: "CAMP-002", name: "Synthetic Loyalty Preview", targetSegment: "high_value", action: "early_access", status: "draft", startDate: "2026-10-01", endDate: "2026-10-31", budget: 80000 },
+    { id: "CAMP-003", name: "Synthetic Win-back", targetSegment: "dormant", action: "personalized_reminder", status: "completed", startDate: "2026-06-01", endDate: "2026-06-30", budget: 40000 },
+  ],
+};

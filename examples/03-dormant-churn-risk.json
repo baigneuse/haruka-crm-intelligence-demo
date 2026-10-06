@@ -1,0 +1,22 @@
+{
+  "id": "dormant-churn-risk",
+  "title": {
+    "en": "Classify a dormant customer using recency thresholds",
+    "ja": "購買間隔の閾値で休眠顧客を分類",
+    "zh": "使用最近购买阈值识别沉睡客户"
+  },
+  "request": {
+    "question": "Assess churn risk for this customer.",
+    "customerId": "CUST-002"
+  },
+  "expect": {
+    "intent": "churn_analysis",
+    "toolSequence": ["query_customer", "calculate_ltv", "find_churn_risk"],
+    "confidence": "medium",
+    "values": {
+      "customers.0.churnRisk": "high",
+      "customers.0.daysSinceLastPurchase": 303
+    },
+    "evidenceKinds": ["metric"]
+  }
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A synthetic, explainable CRM intelligence portfolio demo." />
+    <title>HARUKA CRM Intelligence — Public Demo</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="HARUKA home">
+        <span class="brand-mark" aria-hidden="true">H</span>
+        <span><strong>HARUKA</strong><small>CRM INTELLIGENCE</small></span>
+      </a>
+      <nav class="top-actions" aria-label="Display settings">
+        <span class="demo-badge" data-i18n="syntheticBadge">Synthetic data only</span>
+        <div class="locale-switcher" role="group" aria-label="Language">
+          <button type="button" data-locale="en" aria-pressed="true">EN</button>
+          <button type="button" data-locale="ja" aria-pressed="false">日本語</button>
+          <button type="button" data-locale="zh" aria-pressed="false">中文</button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="eyebrow">EXPLAINABLE CRM DECISIONS</p>
+          <h1 data-i18n="headline">Turn customer facts into reviewable retention actions.</h1>
+          <p class="lede" data-i18n="lede">A deterministic portfolio demo for customer analytics, tool orchestration, evidence, and evaluation.</p>
+        </div>
+        <div class="boundary-card">
+          <span class="boundary-icon" aria-hidden="true">◎</span>
+          <div>
+            <strong data-i18n="boundaryTitle">Public-demo boundary</strong>
+            <p data-i18n="boundaryText">No production connection, credentials, personal data, or hidden model reasoning is included.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Agent demo workspace">
+        <aside class="control-panel">
+          <div class="section-heading">
+            <span>01</span>
+            <div><p data-i18n="inputKicker">BUSINESS QUESTION</p><h2 data-i18n="inputTitle">Configure an analysis</h2></div>
+          </div>
+
+          <button id="try-example" class="try-example" type="button" disabled data-i18n="tryExample">Try this example · CUST-002</button>
+          <p class="field-help" data-i18n="tryHelp">A dormant customer: inspect the metrics, win-back recommendation and evidence. Then press Run.</p>
+          <label for="customer" data-i18n="customerLabel">Synthetic customer</label>
+          <select id="customer" aria-describedby="customer-help"><option data-i18n="loading">Loading…</option></select>
+          <p id="customer-help" class="field-help" data-i18n="customerHelp">Use fictional inputs only. Do not enter personal or confidential information.</p>
+
+          <fieldset>
+            <legend data-i18n="scenarioLabel">Example workflow</legend>
+            <div class="scenario-grid">
+              <button type="button" class="scenario active" data-scenario="profile"><span>01</span><strong data-i18n="scenarioProfile">Customer profile</strong></button>
+              <button type="button" class="scenario" data-scenario="ltv"><span>02</span><strong data-i18n="scenarioLtv">Calculate LTV</strong></button>
+              <button type="button" class="scenario" data-scenario="churn"><span>03</span><strong data-i18n="scenarioChurn">Find churn risk</strong></button>
+              <button type="button" class="scenario" data-scenario="campaign"><span>04</span><strong data-i18n="scenarioCampaign">Recommend campaign</strong></button>
+            </div>
+          </fieldset>
+
+          <label for="question" data-i18n="questionLabel">Question sent to the orchestrator</label>
+          <textarea id="question" rows="3" maxlength="500"></textarea>
+
+          <button id="run" class="run-button" type="button"><span data-i18n="runButton">Run explainable analysis</span><span aria-hidden="true">→</span></button>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </aside>
+
+        <section class="result-panel" aria-live="polite">
+          <div class="section-heading">
+            <span>02</span>
+            <div><p data-i18n="outputKicker">STRUCTURED RESULT</p><h2 data-i18n="outputTitle">Decision evidence</h2></div>
+          </div>
+          <div id="empty-state" class="empty-state">
+            <div class="empty-visual" aria-hidden="true"><span></span><span></span><span></span></div>
+            <h3 data-i18n="emptyTitle">Select a workflow and run the analysis.</h3>
+            <p data-i18n="emptyText">The result will show calculated facts, tool sequence, evidence, and limitations.</p>
+          </div>
+          <div id="result" hidden></div>
+        </section>
+      </section>
+
+      <section class="method-strip" aria-label="Method overview">
+        <div><span>01</span><strong data-i18n="methodOneTitle">Facts</strong><p data-i18n="methodOneText">Customer, order, item, and product records.</p></div>
+        <div><span>02</span><strong data-i18n="methodTwoTitle">Deterministic tools</strong><p data-i18n="methodTwoText">Explicit formulas and versioned rules.</p></div>
+        <div><span>03</span><strong data-i18n="methodThreeTitle">Evidence</strong><p data-i18n="methodThreeText">Every recommendation points back to facts or rules.</p></div>
+        <div><span>04</span><strong data-i18n="methodFourTitle">Evaluation</strong><p data-i18n="methodFourText">Executable scenarios check stable behavior.</p></div>
+      </section>
+    </main>
+
+    <footer>
+      <p data-i18n="footerText">Sanitized portfolio edition · Synthetic data · No production credentials</p>
+      <span data-i18n="sourceLink">Repository documentation</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+node_modules/
+.npm-cache/
+dist/
+.test-dist/
+coverage/
+.env*
+!.env.example
+.vercel/
+*.map
+*.log
+.DS_Store

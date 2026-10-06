@@ -1,0 +1,22 @@
+{
+  "id": "profile-with-purchase-evidence",
+  "title": {
+    "en": "Assemble a customer profile from source facts",
+    "ja": "元データの事実から顧客プロファイルを作成",
+    "zh": "从源数据事实生成客户画像"
+  },
+  "request": {
+    "question": "Show the customer profile and purchase facts.",
+    "customerId": "CUST-001"
+  },
+  "expect": {
+    "intent": "customer_profile",
+    "toolSequence": ["query_customer"],
+    "confidence": "high",
+    "values": {
+      "customer.segment": "loyal",
+      "orders.2.id": "ORD-102"
+    },
+    "evidenceKinds": ["customer_attribute", "order_fact"]
+  }
+}

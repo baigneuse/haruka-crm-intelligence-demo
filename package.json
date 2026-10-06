@@ -1,0 +1,33 @@
+{
+  "name": "haruka-crm-intelligence-demo",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A sanitized CRM intelligence portfolio demo with deterministic agent tools and synthetic data.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "npm run build && npm start",
+    "build": "node scripts/build.mjs",
+    "build:vercel": "npm run build && node scripts/build-vercel.mjs",
+    "test:deployment": "node --test scripts/deployment.test.mjs",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test:compile": "tsc -p tsconfig.test.json",
+    "test": "npm run test:compile && node --test .test-dist/tests/*.test.js",
+    "eval": "npm run test:compile && node .test-dist/scripts/run-evals.js",
+    "secret:scan": "node scripts/release-scan.mjs",
+    "links:check": "node scripts/check-links.mjs",
+    "audit:deps": "npm audit --audit-level=high",
+    "verify": "npm run secret:scan && npm run typecheck && npm run lint && npm test && npm run eval && npm run build:vercel && npm run test:deployment && npm run links:check"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.4",
+    "eslint": "^10.12.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.1"
+  }
+}

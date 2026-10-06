@@ -1,0 +1,10 @@
+.git
+.env*
+!.env.example
+node_modules
+.npm-cache
+.test-dist
+dist
+coverage
+*.log
+*.map

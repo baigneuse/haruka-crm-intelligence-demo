@@ -1,0 +1,23 @@
+{
+  "id": "win-back-recommendation",
+  "title": {
+    "en": "Recommend a traceable win-back hypothesis",
+    "ja": "追跡可能な復帰施策仮説を推奨",
+    "zh": "推荐可追溯的召回假设"
+  },
+  "request": {
+    "question": "Recommend a campaign action for this customer.",
+    "customerId": "CUST-002"
+  },
+  "expect": {
+    "intent": "campaign_recommendation",
+    "toolSequence": ["query_customer", "calculate_ltv", "find_churn_risk", "recommend_campaign"],
+    "confidence": "medium",
+    "values": {
+      "actionCode": "personalized_win_back",
+      "priority": "high",
+      "expectedKpi": "reactivation_rate"
+    },
+    "evidenceKinds": ["order_fact", "metric", "rule"]
+  }
+}
