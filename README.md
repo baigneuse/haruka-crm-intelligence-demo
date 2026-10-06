@@ -4,9 +4,11 @@
 
 > Explainable CRM decision support: deterministic tools turn customer and transaction data into reviewable retention and campaign recommendations.
 
-[Live demo / run locally](docs/deployment.md#live-demo) · [Architecture](#architecture) · [Evaluation](#evaluation)
+[Live Demo](https://haruka-crm-intelligence-demo.vercel.app) · [Architecture](#architecture) · [Evaluation](#evaluation) · [Deployment](docs/deployment.md)
 
 Explore a complete customer-to-decision workflow: typed tools, exact calculations, source-linked evidence, and executable evaluations. English / 日本語 / 简体中文. Select **Try this example · CUST-002**, then run the analysis; it never runs automatically.
+
+This repository provides engineering evidence; the live demo provides interaction evidence. No login is required.
 
 ## Why this exists
 
@@ -33,7 +35,7 @@ Haruka models that decision path from source records to an evidence-backed outpu
 
 | Capability | Status | What that means |
 |---|---|---|
-| Synthetic browser demo | **Implemented** | UI, API, orchestration, tools, evidence, and evaluation run locally. |
+| Synthetic browser demo | **Implemented and publicly deployed** | UI, read-only API, orchestration, tools, and evidence run locally and on Vercel; evaluation runs locally and in CI. |
 | Deterministic metrics and recommendations | **Implemented** | Formulas and rules are explicit TypeScript code with tests. |
 | PostgreSQL schema | **Implemented as a reproducible reference** | Normalized DDL, constraints, indexes, and RLS enablement are included. |
 | PostgreSQL repository adapter | **Implemented, not wired into the public runtime** | It accepts an injected SQL client and uses parameterized queries; no driver or credentials are bundled. |

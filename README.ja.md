@@ -4,9 +4,11 @@
 
 > 顧客・購買データから、決定論的ツールで根拠を確認できるリテンション・CRM施策を導く意思決定支援デモです。
 
-[デモ / ローカル実行](docs/deployment.md#live-demo) · [アーキテクチャ](docs/architecture.md) · [評価](docs/evaluation.md)
+[Live Demo / 公開デモ](https://haruka-crm-intelligence-demo.vercel.app) · [アーキテクチャ](docs/architecture.md) · [評価](docs/evaluation.md) · [デプロイ](docs/deployment.md)
 
 合成データ、型付きツール、計算指標、根拠、実行履歴、評価を一つの流れで確認できます。**この例を試す · CUST-002**を選び、分析を実行してください。自動実行はしません。English / 日本語 / 简体中文に対応しています。
+
+本リポジトリは実装の根拠、公開デモは操作体験の根拠を示します。ログインは不要です。
 
 ## 解決する課題
 
@@ -23,7 +25,7 @@ HARUKAは、元データから根拠付きの意思決定出力までを一つ�
 
 | 機能 | 状況 | 内容 |
 |---|---|---|
-| 合成データのブラウザデモ | **実装済み** | UI、API、オーケストレーション、ツール、根拠、評価がローカルで動作します。 |
+| 合成データのブラウザデモ | **実装・公開済み** | UI、読み取り専用API、ツール、根拠がローカルとVercelで動作し、評価はローカルとCIで実行します。 |
 | 決定論的な指標・推奨 | **実装済み** | TypeScriptの明示的な式・ルールとテストがあります。 |
 | PostgreSQL schema | **再現可能な参照実装** | DDL、制約、index、RLS有効化を含みます。 |
 | PostgreSQL repository adapter | **実装済み・公開ランタイム未接続** | SQL clientを注入し、parameterized queryを使用します。driverや認証情報は含みません。 |

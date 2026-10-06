@@ -4,9 +4,11 @@
 
 > 一个可解释的 CRM 决策支持演示，通过确定性工具把客户与交易数据转化为可审查的留存和营销建议。
 
-[演示 / 本地运行](docs/deployment.md#live-demo) · [架构](docs/architecture.md) · [评估](docs/evaluation.md)
+[Live Demo / 在线演示](https://haruka-crm-intelligence-demo.vercel.app) · [架构](docs/architecture.md) · [评估](docs/evaluation.md) · [部署](docs/deployment.md)
 
 从合成客户出发，检查类型化工具、计算指标、推荐证据、调用轨迹与可执行评估。选择**试试这个示例 · CUST-002**后点击运行；不会自动执行。支持 English / 日本語 / 简体中文。
+
+GitHub 仓库提供工程实现证据，在线演示提供交互体验证据，无需登录。
 
 ## 要解决的问题
 
@@ -23,7 +25,7 @@ HARUKA 把源记录到证据型决策结果建模为完整链路。重点不是�
 
 | 能力 | 状态 | 说明 |
 |---|---|---|
-| 合成数据浏览器演示 | **已实现** | UI、API、编排器、工具、证据和评估均可在本地运行。 |
+| 合成数据浏览器演示 | **已实现并公开部署** | UI、只读 API、工具和证据可在本地与 Vercel 运行，评估在本地与 CI 执行。 |
 | 确定性指标与建议 | **已实现** | 公式和规则是有测试的显式 TypeScript 代码。 |
 | PostgreSQL schema | **可复现参考实现** | 包含 DDL、约束、索引与 RLS 启用。 |
 | PostgreSQL repository adapter | **已实现，但未接入公开运行时** | 接收注入的 SQL client，并使用参数化查询；不附带 driver 或凭据。 |
